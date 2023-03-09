@@ -1,9 +1,13 @@
 import React from "react";
+import { useState } from "react";
 
 import ListeProfesseurs from "./components/ListeProfesseurs";
+import NouveauProfesseur from "./components/NouveauProfesseurs";
+
+import "./PageProfesseurs.css"
 
 function PageProfesseurs() {
-  const professeurs = [
+  const [professeurs, Prof] = useState([
     {
       id: "H21",
       nom: "Mounir Dupuis",
@@ -28,8 +32,28 @@ function PageProfesseurs() {
       image: "https://www.printemps-bourges.com/wp-content/uploads/2022/11/LORENZO_600x400_Fifou.png",
       cours: "cours enseignés: Sortilèges dangereux",
     }
-  ];
-  return <ListeProfesseurs professeurs={professeurs} />;
+  ]);
+  
+
+
+
+
+  function AjouterProf(nouveauProf){
+    Prof(professeurs.concat(nouveauProf));
+    console.log(nouveauProf);
+  }
+
+
+  return(
+    <div className="formulaire">
+      <ListeProfesseurs professeurs={professeurs} />
+      <h2 className = "prof">Formulaire de prof</h2>
+      <NouveauProfesseur adresseMethode={AjouterProf}/>
+    </div>
+  )
 }
+
+
+
 
 export default PageProfesseurs;

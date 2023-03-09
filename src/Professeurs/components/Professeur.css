@@ -1,0 +1,50 @@
+.prof-item {
+    margin: 1rem;
+    width: calc(45% - 2rem);
+    min-width: 17.5rem;
+  }
+  
+  .prof-item a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    padding: 1rem;
+    color: white;
+    background: #292929;
+  }
+  
+  .prof-item a:hover,
+  .prof-item a:active {
+    background: #ffd900;
+  }
+  
+  .contenu {
+    padding: 0;
+  }
+  
+  .prof-item-image {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+  }
+  
+  .prof-item-info h2 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: normal;
+    color: #ffd900;
+  }
+  
+  .prof-item:hover h2,
+  .prof-item:active h2,
+  .prof-item:hover h3,
+  .prof-item:active h3 {
+    color: #292929;
+  }
+  
+  .prof-item-info h3 {
+    margin: 0;
+  }
+  

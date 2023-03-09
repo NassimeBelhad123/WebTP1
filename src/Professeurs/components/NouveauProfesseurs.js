@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import "./NouveauProfesseur.css"
+
 
 function NouvelObjectif({adresseMethode}) {
   
@@ -52,8 +54,9 @@ function NouvelObjectif({adresseMethode}) {
 
   return (
     <form onSubmit={ajouterNouvelObjectifHandler}>
+    <div className="textFormulaire">
       <input  type="text" value={nom}  onChange={saisieNomHandler}/> Nom <br/>
-     
+    </div>
       <button type="submit">Soumettre le formulaire</button>
     </form>
   );

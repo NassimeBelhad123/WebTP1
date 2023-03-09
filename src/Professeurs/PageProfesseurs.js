@@ -7,12 +7,13 @@ import NouveauProfesseur from "./components/NouveauProfesseurs";
 import "./PageProfesseurs.css"
 
 function PageProfesseurs() {
+  const listeCours = ["vol au balais", "sortilèges de guérison", "astronomie"]
   const [professeurs, Prof] = useState([
     {
       id: "H21",
       nom: "Mounir Dupuis",
       image: "https://www.radiofrance.fr/s3/cruiser-production/2021/06/f8153bee-2f8a-470d-b08e-9ae38e453ff5/1200x680_maes_rappeur.jpg",
-      cours: "cours enseignés: Vol au balais",
+      cours: listeCours,
     },
     {
       id:"K33",
@@ -30,7 +31,7 @@ function PageProfesseurs() {
       id:"F78",
       nom:"Morimo Diez",
       image: "https://www.printemps-bourges.com/wp-content/uploads/2022/11/LORENZO_600x400_Fifou.png",
-      cours: "cours enseignés: Sortilèges dangereux",
+      cours: "cours enseignés: Sortilèges interdits",
     }
   ]);
   

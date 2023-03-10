@@ -8,30 +8,34 @@ import "./PageProfesseurs.css"
 
 function PageProfesseurs() {
   const listeCours = ["vol au balais", "sortilèges de guérison", "astronomie"]
+  const listeCours2 = ["Botanique", "Métamorphose", "Potions"]
+  const listeCours3 = ["Défense contre les forces du Mal", "Histoire de la magie"]
+  const listeCours4 = ["Soins aux créatures magiques", "Études moldues", "Arithmancie", "Enchantement"]
+
   const [professeurs, Prof] = useState([
     {
       id: "H21",
-      nom: "Mounir Dupuis",
-      image: "https://www.radiofrance.fr/s3/cruiser-production/2021/06/f8153bee-2f8a-470d-b08e-9ae38e453ff5/1200x680_maes_rappeur.jpg",
-      cours: listeCours,
+      nom: "Sibylle Trelawney",
+      image: "https://i.guim.co.uk/img/media/6a2f20dcba0d029b8495cff4def0b78bc8ef6167/0_6_3072_1843/master/3072.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=70cf4f7a013704243b38b227fc55d7b8",
+      cours:  listeCours.map((cours)=>   <li>{cours}</li>),
     },
     {
       id:"K33",
-      nom:"Alez Forzeneger",
-      image: "https://www.nextplz.fr/wp-content/uploads/nextplz/2019/09/kaaris-actus-68721923-837762793286518-3632780357916241829-n-e1569248226963.jpg",
-      cours: "cours enseignés: Cours de potions",
+      nom:"Severus Rogue",
+      image: "https://pbs.twimg.com/profile_images/426039193916035073/iomzYxfK_400x400.jpeg",
+      cours: listeCours2.map((cours) => <li>{cours}</li>),
     },
     {
       id:"D34",
-      nom:"Zoger Malfoy",
-      image: "https://tchadinfos.com/wp-content/uploads/Naza.jpg",
-      cours: "cours enseignés: Cours contre les forces du mal",
+      nom:"Remus Lupin",
+      image: "https://geekalition.com/wp-content/uploads/2022/08/Remus-Lupin-1-930x620.webp",
+      cours: listeCours3.map((cours)=>    <li>{cours}</li>),
     },
     {
       id:"F78",
-      nom:"Morimo Diez",
-      image: "https://www.printemps-bourges.com/wp-content/uploads/2022/11/LORENZO_600x400_Fifou.png",
-      cours: "cours enseignés: Sortilèges interdits",
+      nom:"Renée Bibine",
+      image: "http://1.bp.blogspot.com/_ylmkHtECo0E/RpOvHzC8DUI/AAAAAAAAADU/_ujasG49U4E/s200/bibine.jpg",
+      cours: listeCours4.map((cours =>   <li>{cours}</li>)),
     }
   ]);
   

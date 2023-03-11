@@ -1,8 +1,8 @@
 import React from "react"
 import { useState } from "react";
 
-function PageCours(){
-    const cours = [
+import Cours from "./Cours/components/Cours"
+    const COURS = [
 
         {
             id:"CO123",
@@ -99,15 +99,32 @@ function PageCours(){
             nombreMax: 20,
             dateDebut: new Date(2023, 2, 1),
             dateFin: new Date(2023, 5, 19),
-        }
+        },
 
 
 
 
-    ]
+    ];
+
+    const  PageCours =() =>{
+
+        const[cours, setCours] = useState(COURS);
+
+        const ajouterCoursHandler = (cours) =>{
+            setCours((ancienCours) =>{
+                return [cours, ...ancienCours];
+            });
+        };
+
+        return(
+            <div>
+                <Cours items = {cours}/>
+            </div>
+        )
+    }
     
 
-}
+
 
 
 

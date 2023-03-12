@@ -1,8 +1,9 @@
 import React from "react"
 import { useState } from "react";
 
-import Cours from "./Cours/components/Cours"
-    const COURS = [
+import Cours from "./components/Cours"
+import NouveauCours from "./components/NouveauCours/NouveauCours";
+    const COURSS = [
 
         {
             id:"CO123",
@@ -97,8 +98,8 @@ import Cours from "./Cours/components/Cours"
             titre: "Enchantement",
             discipline: "magie",
             nombreMax: 20,
-            dateDebut: new Date(2023, 2, 1),
-            dateFin: new Date(2023, 5, 19),
+            dateDebut: new Date(2022, 2, 1),
+            dateFin: new Date(2022, 5, 19),
         },
 
 
@@ -108,9 +109,9 @@ import Cours from "./Cours/components/Cours"
 
     const  PageCours =() =>{
 
-        const[cours, setCours] = useState(COURS);
+        const[courss, setCours] = useState(COURSS);
 
-        const ajouterCoursHandler = (cours) =>{
+        const ajoutCoursHandler = (cours) =>{
             setCours((ancienCours) =>{
                 return [cours, ...ancienCours];
             });
@@ -118,7 +119,8 @@ import Cours from "./Cours/components/Cours"
 
         return(
             <div>
-                <Cours items = {cours}/>
+                <NouveauCours onAjoutCours = {ajoutCoursHandler}/>
+                <Cours items = {courss}/>
             </div>
         )
     }

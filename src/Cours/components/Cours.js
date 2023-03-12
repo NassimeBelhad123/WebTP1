@@ -7,14 +7,14 @@ import "./Cours.css"
 
 
 const Filtre = (props) => {
-    const [filtreSession, setFiltreSession] = useState('Hiver 2023');
+    const [filteredSession, setFilteredSession] = useState('2023');
 
     const filterChangeHandler = (selectedSession) => {
-        setFiltreSession(selectedSession);
+        setFilteredSession(selectedSession);
     };
 
     const coursFiltrees = props.items.filter((cours) =>{
-        return cours.date.getFullYear().toString() === filtreSession
+        return cours.dateDebut.getFullYear().toString() === filteredSession;
     });
 
 
@@ -22,7 +22,7 @@ const Filtre = (props) => {
         <div>
             <Card className = 'expenses'>
                 <FiltreCours
-                selected = {filtreSession}
+                selected = {filteredSession}
                 onChangementFiltre = {filterChangeHandler}
                 />
                 <ListeCours items = {coursFiltrees} />
@@ -31,4 +31,4 @@ const Filtre = (props) => {
     );
 };
 
-export default Filtre
+export default Filtre;

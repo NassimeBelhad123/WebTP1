@@ -1,7 +1,7 @@
 import React from 'react'
 
 import CoursObjet from './CoursOjet'
-import "ListeCours.css"
+import "./ListeCours.css"
 
 
 const ListeCours = (props) =>{

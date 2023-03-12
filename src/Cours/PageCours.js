@@ -3,8 +3,18 @@ import { useState } from "react";
 
 import Cours from "./components/Cours"
 import NouveauCours from "./components/NouveauCours/NouveauCours";
-    const COURSS = [
 
+
+const names = ["Camille Martin", "Emma Dupont", "Lucas Girard", "Léa Bernard", "Théo Lefebvre", "Manon Dubois", "Hugo Moreau", "Sarah Rousseau", "Nicolas Mercier", "Elodie Dupuis"]
+const names2 = ["Emma Smith", "David Lee", "Sarah Williams", "James Johnson", "Sophia Garcia", "Benjamin Davis", "Olivia Brown", "William Hernandez", "Isabella Rodriguez", "Michael Martinez", "Charlotte Anderson", "Christopher Thompson"]
+const names3 = ["Emily Nguyen", "Alexander Kim", "Avery Jackson", "Noah Patel", "Aria Chen", "Daniel Lee", "Grace Davis", "Ethan Rodriguez", "Madison Kim", "Samuel Garcia", "Sophie Wilson", "Jacob Brown", "Mia Hernandez", "Andrew Wilson", "Avery Baker"]
+const names4 = ["Evelyn Carter", "Ryan Lee", "Victoria Johnson", "Nathan Davis", "Leah Martin", "Connor Brown", "Jasmine Rodriguez", "Ian Kim", "Sophia Wilson", "Isaac Hernandez", "Maya Patel", "William Lee", "Chloe Anderson"] 
+
+
+
+
+    const COURSS = [
+        
         {
             id:"CO123",
             titre: "Astronomie",
@@ -12,6 +22,8 @@ import NouveauCours from "./components/NouveauCours/NouveauCours";
             nombreMax: 20,
             dateDebut: new Date(2023, 1, 23),
             dateFin: new Date(2023, 5, 21),
+            professeur: "Sibylle Trelawney",
+            etudiants: names.map((cours)=>   <li>{cours}</li>),
         },
         {
             id:"CO432",
@@ -20,6 +32,8 @@ import NouveauCours from "./components/NouveauCours/NouveauCours";
             nombreMax: 18,
             dateDebut: new Date(2023, 1, 26),
             dateFin: new Date(2023, 5, 27),
+            professeur: "Remus Lupin",
+            etudiants: names2.map((cours)=>   <li>{cours}</li>),
         },
         {
             id:"CO980",
@@ -28,6 +42,8 @@ import NouveauCours from "./components/NouveauCours/NouveauCours";
             nombreMax:15,
             dateDebut: new Date(2023, 3, 25),
             dateFin: new Date(2023, 6, 6),
+            professeur: "Severus Rogue",
+            etudiants: names3.map((cours)=>   <li>{cours}</li>),
         },
         {
             id: "CO603",
@@ -36,6 +52,8 @@ import NouveauCours from "./components/NouveauCours/NouveauCours";
             nombreMax: 21,
             dateDebut: new Date(2023, 1, 29),
             dateFin: new Date(2023, 5, 17),
+            professeur: "Severus Rogue",
+            etudiants: names4.map((cours)=>   <li>{cours}</li>),
         },
         {
             id:"CO501",
@@ -44,6 +62,7 @@ import NouveauCours from "./components/NouveauCours/NouveauCours";
             nombreMax: 12,
             dateDebut: new Date(2022, 2, 1),
             dateFin: new Date(2022, 5, 21),
+            professeur: "Sibylle Trelawney"
         },
         {
             id:"CO211",
@@ -52,6 +71,7 @@ import NouveauCours from "./components/NouveauCours/NouveauCours";
             nombreMax: 23,
             dateDebut: new Date(2022, 1, 23),
             dateFin: new Date(2022, 5, 29),
+            professeur: "Sibylle Trelawney"
         },
         {
             id:"CO999",
@@ -60,6 +80,7 @@ import NouveauCours from "./components/NouveauCours/NouveauCours";
             nombreMax:15,
             dateDebut: new Date(2021, 8, 25),
             dateFin: new Date(2021, 12, 5),
+            professeur: "Severus Rogue"
         },
         {
             id:"CO768",
@@ -68,6 +89,7 @@ import NouveauCours from "./components/NouveauCours/NouveauCours";
             nombreMax: 20,
             dateDebut: new Date(2021, 9, 23),
             dateFin: new Date(2021, 12, 15),
+            professeur: "Remus Lupin"
         },
         {
             id:"CO326",
@@ -76,6 +98,7 @@ import NouveauCours from "./components/NouveauCours/NouveauCours";
             nombreMax: 12,
             dateDebut: new Date(2022, 3, 15),
             dateFin: new Date(2022, 6, 2),
+            professeur:"Renée Bibine"
         },
         {
             id:"CO103",
@@ -84,6 +107,7 @@ import NouveauCours from "./components/NouveauCours/NouveauCours";
             nombreMax: 25,
             dateDebut: new Date(2022, 2, 2),
             dateFin: new Date(2022, 4, 27),
+            professeur:"Renée Bibine"
         },
         {
             id:"CO393",
@@ -92,6 +116,7 @@ import NouveauCours from "./components/NouveauCours/NouveauCours";
             nombreMax: 19,
             dateDebut: new Date(2021, 9, 23),
             dateFin: new Date(2021, 12, 21),
+            professeur:"Renée Bibine"
         },
         {
             id:"CO000",
@@ -100,6 +125,7 @@ import NouveauCours from "./components/NouveauCours/NouveauCours";
             nombreMax: 20,
             dateDebut: new Date(2021, 9, 1),
             dateFin: new Date(2021, 12, 19),
+            professeur:"Renée Bibine"
         },
 
 

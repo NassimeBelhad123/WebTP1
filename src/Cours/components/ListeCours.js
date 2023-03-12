@@ -18,6 +18,9 @@ const ListeCours = (props) =>{
                     nombreMax = {cours.nombreMax}
                     dateDebut = {cours.dateDebut}
                     dateFin = {cours.dateFin}
+                    professeur = {cours.professeur}
+                    etudiants = {cours.etudiants}
+
                     />
             ))}
         </ul>

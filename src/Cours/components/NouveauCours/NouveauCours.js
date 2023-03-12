@@ -12,7 +12,7 @@ const NouveauCours = (props) =>{
             ...coursSaisie,
             id: Math.random().toString(),
         };
-        props.onAddClass(donneesCours);
+        props.onAjoutCours(donneesCours);
         setEnEdition(false);
     };
 

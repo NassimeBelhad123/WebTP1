@@ -8,10 +8,10 @@ const DateDepense = (props) => {
   const annee = props.dateDebut.getFullYear();
 
   return (
-    <div className='expense-date'>
-      <div className='expense-date__month'>{mois}</div>
-      <div className='expense-date__year'>{annee}</div>
-      <div className='expense-date__day'>{jour}</div>
+    <div className='class-date'>
+      <div className='class-date__month'>{mois}</div>
+      <div className='class-date__year'>{annee}</div>
+      <div className='class-date__day'>{jour}</div>
     </div>
   );
 };

@@ -7,6 +7,12 @@ function NouvelObjectif({adresseMethode}) {
   const [nom, setSaisieNom] = useState(
     ""
   )
+  const [prenom, setSaisiePrenom] = useState(
+    ""
+  )
+  const [listeCours, setSaisieListeCours] = useState(
+    ""
+  )
   
 
  
@@ -15,6 +21,7 @@ function NouvelObjectif({adresseMethode}) {
    event.preventDefault();
     const nouveauProf = {
       id: "12",
+      prenom: prenom,
       nom: nom,
       image: "https://www.ipafribourg.ch/wp-content/uploads/2017/02/inconnu.jpg",
       cours:"Aucun Cours"
@@ -25,9 +32,18 @@ function NouvelObjectif({adresseMethode}) {
       alert("Veuillez entrer un nom")
       return;
     }
+    if(prenom ===""){
+      alert("Veuillez entrer un prenom")
+      return;
+    }
+    if(listeCours===""){
+      alert("entrez une liste de cours")
+    }
     
     adresseMethode(nouveauProf);
     setSaisieNom("")
+    setSaisiePrenom("")
+    setSaisieListeCours("")
     
 
    
@@ -37,14 +53,29 @@ function NouvelObjectif({adresseMethode}) {
   //si le nom contient un nombre
   function saisieNomHandler(event){
     setSaisieNom(event.target.value);
-    if(isNaN(event.target.value)){
-      return;
-    }
-    else{
-        alert("Entrez un nom correct")
-        
+    if (/\d/.test(event.target.value)) {
+      alert("Entrez un nom convenable")
     }
     
+  }
+
+  function saisiePrenomHandler(event){
+    const input = event.target.value
+    setSaisiePrenom(input);
+    if (/\d/.test(input)) {
+      alert("Entrez un nom convenable")
+    }
+
+  }
+
+  function saisieListeCoursHandler(event) {
+    const input = event.target.value;
+    setSaisieListeCours(input);
+    
+    
+    if (/\d/.test(input)) {
+      alert("Entrez une liste de cours convenable");
+    }
   }
 
 
@@ -53,11 +84,27 @@ function NouvelObjectif({adresseMethode}) {
 
 
   return (
-    <form onSubmit={ajouterNouvelObjectifHandler}>
+    <form className = "formulaireStyle" onSubmit={ajouterNouvelObjectifHandler}>
     <div className="textFormulaire">
-      <input  type="text" value={nom}  onChange={saisieNomHandler}/> Nom <br/>
-    </div>
+      <h2>Formulaire</h2>
+      <div className = "new-prof__control">
+       <label>Nom</label>
+       <input  type="text" value={nom}  onChange={saisieNomHandler}/>  <br/>
+      </div>
+
+      <div className="new-prof__control">
+        <label>Prenom</label>
+        <input type = "text" value = {prenom} onChange = {saisiePrenomHandler}/> <br/>
+      </div>
+
+      <div className="new-prof__control">
+        <label>Liste de cours enseignés</label>
+        <input type="text" value={listeCours} onChange = {saisieListeCoursHandler}/> <br/>
+      </div>
+
+      
       <button type="submit">Soumettre le formulaire</button>
+      </div>
     </form>
   );
 }

@@ -20,7 +20,7 @@ const Filtre = (props) => {
 
     return(
         <div>
-            <Card className = 'expenses'>
+            <Card className = 'classes'>
                 <FiltreCours
                 selected = {filteredSession}
                 onChangementFiltre = {filterChangeHandler}

@@ -1,39 +1,39 @@
-.new-expense {
-    background-color: #a892ee;
-    padding: 1rem;
-    margin: 2rem auto;
+.new-class {
+    background-color: #83a6ce;
+    padding: 2rem;
+    margin: 3rem auto;
     width: 50rem;
     max-width: 95%;
-    border-radius: 12px;
+    border-radius: 48px;
     text-align: center;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
   }
   
-  .new-expense button {
+  .new-class button {
     font: inherit;
     cursor: pointer;
     padding: 1rem 2rem;
-    border: 1px solid #40005d;
-    background-color: #40005d;
+    border: 1px solid #2c7683;
+    background-color: #496896;
     color: white;
-    border-radius: 12px;
-    margin-right: 1rem;
+    border-radius: 48px;
+    
   }
   
-  .new-expense button:hover,
-  .new-expense button:active {
-    background-color: #510674;
-    border-color: #510674;
+  .new-class button:hover,
+  .new-class button:active {
+    background-color: #371d7e;
+    border-color: #312385;
   }
   
-  .new-expense button.alternative {
-    color: #220131;
+  .new-class button.alternative {
+    color: #33248a;
     border-color: transparent;
     background-color: transparent;
   }
   
-  .new-expense button.alternative:hover,
-  .new-expense button.alternative:active {
+  .new-class button.alternative:hover,
+  .new-class button.alternative:active {
     background-color: #ddb3f8;
   }
   

@@ -17,14 +17,19 @@ const CoursObjet = (props) => {
 
   return (
     <li>
-      <Card className='expense-item'>
+      <Card className='classes-item'>
         <DateCours dateDebut={props.dateDebut} />
-        <div className='expense-item__description'>
-          <div className="coursDetails">
-            <h2 onClick={toggleEtudiantsHandler}>{props.titre}</h2>
-            {showEtudiants && <p className="infos-box">Liste des etudiants: {props.etudiants} <br />Le professeur est {props.professeur} </p>}
+        <p className = "mot">jusqu'au </p>
+        <DateCours dateDebut={props.dateFin} />
+        <div className='classes-item__description'>
+          <div>
+            <h2 className='coursDetails' onClick={toggleEtudiantsHandler}>{props.titre}</h2>
+            <p className={`infos-box2 ${showEtudiants ? 'open' : ''}`}>
+              Liste des etudiants: {props.etudiants} <br />Le professeur est {props.professeur}
+            </p>
           </div>
         </div>
+        
       </Card>
     </li>
   );

@@ -6,10 +6,10 @@ import "./ListeCours.css"
 
 const ListeCours = (props) =>{
     if(props.items.length === 0){
-        return <h2 className = 'expense-list__fallback'>Les cours durant cette session étaient annulés en raison du conflit avec les mages noirs.</h2>;
+        return <h2 className = 'etat-indisponible'>Les cours durant cette session étaient annulés en raison du conflit avec les mages noirs.</h2>;
     }
     return(
-        <ul className  ='expense-list'>
+        <ul className  ='classes-list'>
             {props.items.map((cours) =>(
                 <CoursObjet
                     key={cours.id}

@@ -12,8 +12,8 @@ const FiltreCours = (props) =>{
 
 
     return(
-        <div className = 'expenses-filter'>
-            <div className = 'expenses-filter__control'>
+        <div className = 'classes-filter'>
+            <div className = 'classes-filter__control'>
                 <label>Filtrer les cours par session</label>
                 <select value = {props.selected} onChange={menuDeroulantHandler}>
                     <option value = "2023">Hiver 2023</option>

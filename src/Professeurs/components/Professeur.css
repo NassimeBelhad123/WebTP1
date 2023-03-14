@@ -1,7 +1,7 @@
 .prof-item {
     margin: 1rem;
     width: calc(45% - 2rem);
-    min-width: 17.5rem;
+    min-width: 20.5rem;
   }
   
   .prof-item a {
@@ -17,7 +17,7 @@
   
   .prof-item a:hover,
   .prof-item a:active {
-    background: #ffd900;
+    background: #619ed8;
   }
   
   .contenu {
@@ -34,7 +34,7 @@
     font-size: 1.5rem;
     margin: 0 0 0.5rem 0;
     font-weight: normal;
-    color: #ffd900;
+    color: #3dc7da;
   }
   
   .prof-item:hover h2,

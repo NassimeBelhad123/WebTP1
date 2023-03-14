@@ -26,7 +26,7 @@ const NouveauCours = (props) =>{
 
 
     return (
-        <div className = 'new-expense'>
+        <div className = 'new-class'>
             {!enEdition && (
                 <button onClick = {debutEditionHandler}>Ajouter un nouveau cours</button>
             )}

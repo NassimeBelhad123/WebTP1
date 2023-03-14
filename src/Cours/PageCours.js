@@ -1,6 +1,7 @@
 import React from "react"
 import { useState } from "react";
 
+
 import Cours from "./components/Cours"
 import NouveauCours from "./components/NouveauCours/NouveauCours";
 
@@ -143,9 +144,12 @@ const names4 = ["Evelyn Carter", "Ryan Lee", "Victoria Johnson", "Nathan Davis",
             });
         };
 
+        
+
         return(
             <div>
                 <NouveauCours onAjoutCours = {ajoutCoursHandler}/>
+                
                 <Cours items = {courss}/>
             </div>
         )

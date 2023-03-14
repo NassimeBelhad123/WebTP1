@@ -1,3 +1,30 @@
 .textFormulaire{
-    color: red;
+    color: rgb(70, 41, 41);
+    background-color: rgb(120, 181, 235, 0.66);
+    max-height: 600px;
+    max-width: 160px;
 }
+
+
+.new-prof__controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .new-prof__control label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .new-prof__control input {
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 60px;
+    border: 1px solid #ccc;
+    width: 20rem;
+    max-width: 100%;
+  }

@@ -36,7 +36,7 @@ const submitHandler = (event) =>{
         titre:saisieTitre,
         discipline:saisieDiscipline,
         dateDebut:new Date(saisieDateDebut),
-        dateFin:new Date(saisieDateFin)
+        dateFin:new Date(saisieDateFin),
 
     };
 
@@ -49,8 +49,8 @@ const submitHandler = (event) =>{
 
 return(
     <form onSubmit={submitHandler}>
-        <div className = 'new-expense__controls'>
-            <div className = "new-expense__control">
+        <div className = 'new-class__controls'>
+            <div className = "new-class__control">
                 <label>Cours</label>
                 <input
                     type='text'
@@ -58,7 +58,7 @@ return(
                     onChange = {changementTitreHandler}
                 />
             </div>
-            <div className="new-expense__controls">
+            <div className="new-class__control">
                 <label>Discipline</label>
                 <input
                     type='text'
@@ -66,7 +66,7 @@ return(
                     onChange={changementDisciplineHandler}
                     />
             </div>
-            <div className='new-expense__control'>
+            <div className='new-class__control'>
           <label>Date de début</label>
           <input
             type='date'
@@ -76,7 +76,7 @@ return(
             onChange={changementDateDebutHandler}
           />
         </div>
-        <div className='new-expense__control'>
+        <div className='new-class__control'>
           <label>Date de fin</label>
           <input
             type='date'
@@ -87,7 +87,7 @@ return(
           />
         </div>
         </div>
-        <div className = "new-expense__actions">
+        <div className = "new-class__actions">
             <button type = "button" onClick={props.onCancel}>Annuler</button>
             <button type = "submit">Ajouter un cours</button>
         </div>

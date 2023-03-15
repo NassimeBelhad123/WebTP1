@@ -10,10 +10,7 @@ function NouvelObjectif({adresseMethode}) {
   const [prenom, setSaisiePrenom] = useState(
     ""
   )
-  const [listeCours, setSaisieListeCours] = useState(
-    ""
-  )
-  
+ 
 
  
 
@@ -36,14 +33,12 @@ function NouvelObjectif({adresseMethode}) {
       alert("Veuillez entrer un prenom")
       return;
     }
-    if(listeCours===""){
-      alert("entrez une liste de cours")
-    }
+    
     
     adresseMethode(nouveauProf);
     setSaisieNom("")
     setSaisiePrenom("")
-    setSaisieListeCours("")
+    
     
 
    
@@ -68,15 +63,7 @@ function NouvelObjectif({adresseMethode}) {
 
   }
 
-  function saisieListeCoursHandler(event) {
-    const input = event.target.value;
-    setSaisieListeCours(input);
-    
-    
-    if (/\d/.test(input)) {
-      alert("Entrez une liste de cours convenable");
-    }
-  }
+ 
 
 
 
@@ -97,10 +84,7 @@ function NouvelObjectif({adresseMethode}) {
         <input type = "text" value = {prenom} onChange = {saisiePrenomHandler}/> <br/>
       </div>
 
-      <div className="new-prof__control">
-        <label>Liste de cours enseignés</label>
-        <input type="text" value={listeCours} onChange = {saisieListeCoursHandler}/> <br/>
-      </div>
+     
 
       
       <button type="submit">Soumettre le formulaire</button>
